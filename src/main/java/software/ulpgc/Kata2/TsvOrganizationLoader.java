@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 
 public class TsvOrganizationLoader implements OrganizationLoader{
 
-    private File file;
+    private final File file;
 
     public TsvOrganizationLoader(String file) {
         this.file = new File(file);
