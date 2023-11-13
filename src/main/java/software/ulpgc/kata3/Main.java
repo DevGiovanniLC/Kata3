@@ -13,8 +13,7 @@ public class Main {
         TsvOrganizationLoader tsvOrganizationLoader = new TsvOrganizationLoader("dataset.tsv");
         List<Organization> load = tsvOrganizationLoader.load();
         CountryOrganizationProcessor countryOrganizationProcessor = new CountryOrganizationProcessor(load);
-        System.out.println(countryOrganizationProcessor.process());
-        HistogramPanel histogramPanel = new HistogramPanel(countryOrganizationProcessor.process());
+        BarChartPanel histogramPanel = new BarChartPanel(countryOrganizationProcessor.process());
         window.setContentPane(histogramPanel);
         window.setVisible(true);
     }
