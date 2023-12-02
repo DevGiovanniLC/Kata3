@@ -1,10 +1,12 @@
 package software.ulpgc.Kata2;
 
+import software.ulpgc.Interfaces.ObjectProcessor;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class CountryOrganizationProcessor implements OrganizationProcessor{
+public class CountryOrganizationProcessor implements ObjectProcessor {
     private final List<Organization> list;
 
     public CountryOrganizationProcessor(List<Organization> list) {

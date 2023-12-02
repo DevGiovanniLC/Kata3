@@ -1,4 +1,4 @@
-package software.ulpgc.kata3;
+package software.ulpgc.Kata3;
 
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
@@ -11,27 +11,25 @@ import java.util.Map;
 
 public class BarChartPanel extends ChartPanel implements ChartCreator {
 
-    public BarChartPanel(Map<String, Integer> data) {
+    public BarChartPanel(Map<String, Integer> data, String title) {
         super(null);
-        setChart(createChart(createDataset(data)));
+        setChart(createChart(createDataset(data), title));
         setVisible(true);
     }
 
     public DefaultCategoryDataset createDataset(Map<String, Integer> dataset) {
         DefaultCategoryDataset histogramDataset = new DefaultCategoryDataset();
 
-
         for (Map.Entry<String, Integer> entry : dataset.entrySet()) {
-            histogramDataset.addValue(entry.getValue(), "Organizations", entry.getKey());
+            histogramDataset.addValue(entry.getValue(), "", entry.getKey());
         }
-
-
+        
         return histogramDataset;
     }
 
-    public JFreeChart createChart(CategoryDataset dataset){
+    public JFreeChart createChart(CategoryDataset dataset, String title){
           return  ChartFactory.createBarChart(
-                  "Histogram",
+                  title,
                   "",
                   "Frequency",
                   dataset,

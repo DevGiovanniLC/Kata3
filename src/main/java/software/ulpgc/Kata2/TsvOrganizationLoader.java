@@ -8,7 +8,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class TsvOrganizationLoader implements OrganizationLoader{
+public class TsvOrganizationLoader implements OrganizationLoader {
 
     private final File file;
 

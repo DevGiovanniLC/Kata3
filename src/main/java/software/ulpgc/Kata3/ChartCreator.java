@@ -1,4 +1,4 @@
-package software.ulpgc.kata3;
+package software.ulpgc.Kata3;
 
 import org.jfree.chart.JFreeChart;
 import org.jfree.data.category.CategoryDataset;
@@ -8,5 +8,5 @@ import java.util.Map;
 
 public interface ChartCreator {
     DefaultCategoryDataset createDataset(Map<String, Integer> dataset);
-    JFreeChart createChart(CategoryDataset dataset);
+    JFreeChart createChart(CategoryDataset dataset, String title);
 }

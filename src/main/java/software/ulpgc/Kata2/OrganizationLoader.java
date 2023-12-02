@@ -1,8 +1,9 @@
 package software.ulpgc.Kata2;
 
-import java.io.FileNotFoundException;
+import software.ulpgc.Interfaces.ObjectLoader;
 import java.util.List;
 
-public interface OrganizationLoader {
-    List<Organization> load() throws FileNotFoundException;
+public interface OrganizationLoader extends ObjectLoader {
+    @Override
+    List<Organization> load();
 }
