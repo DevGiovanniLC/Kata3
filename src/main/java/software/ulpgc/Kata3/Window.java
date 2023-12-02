@@ -20,4 +20,5 @@ public class Window extends JFrame {
 
         setLocationRelativeTo(null);
     }
+
 }
